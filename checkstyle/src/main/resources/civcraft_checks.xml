@@ -22,7 +22,9 @@
     <property name="tabWidth" value="4"/>
 
     <!-- Annotations -->
-    <module name="AnnotationLocation"/>
+    <module name="AnnotationLocation">
+      <property name="allowSamelineSingleParameterlessAnnotation" value="false"/>
+    </module>
 
     <!-- Block Checks -->
     <module name="LeftCurly"/>
@@ -30,27 +32,64 @@
 
     <!-- Class Design -->
     <module name="OneTopLevelClass"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="InnerTypeLast"/>
+    <module name="FinalClass"/>
 
     <!-- Coding -->
+    <module name="DeclarationOrder"/>
     <module name="ExplicitInitialization"/>
+    <module name="DefaultComesLast"/>
+    <module name="EmptyStatement"/>
+    <module name="FallThrough"/>
+    <module name="FinalLocalVariable"/>
+    <module name="HiddenField">
+      <property name="ignoreConstructorParameter" value="true"/>
+      <property name="ignoreSetter" value="true"/>
+      <property name="setterCanReturnItsClass" value="true"/>
+    </module>
+    <module name="IllegalCatch"/>
+    <module name="InnerAssignment"/>
+    <module name="MissingSwitchDefault"/>
+    <module name="MultipleStringLiterals"/>
+    <module name="MultipleVariableDeclarations"/>
+    <module name="OneStatementPerLine"/>
+    <module name="PackageDeclaration"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+    <module name="StringLiteralEquality"/>
 
     <!-- Headers -->
 
     <!-- Imports -->
+    <module name="AvoidStarImport">
     <module name="IllegalImport"/>
+    <module name="ImportOrder">
+      <property name="ordered" value="true"/>
+      <property name="separated" value="true"/>
+      <property name="option" value="above"/>
+      <property name="sortStaticImportsAlphabetically" value="true"/>
+    </module>
     <module name="RedundantImport"/>
     <module name="UnusedImports"/>
 
     <!-- Javadoc Comments -->
     <module name="AtclauseOrder"/>
-    <module name="JavadocType"/>
+    <module name="JavadocMethod">
+      <property name="scope" value="public"/>
+    </module>
+    <module name="JavadocPackage"/>
+    <module name="JavadocType">
+      <property name="scope" value="public"/>
+    </module>
+    <module name="JavadocTagContinuationIndentation"/>
 
     <!-- Metrics -->
 
     <!-- Miscellaneous -->
-    <module name="Indentation">
-      <property name="lineWrappingIndentation" value="8"/>
-    </module>
+    <module name="ArrayTypeStyle"/>
+    <module name="CommentsIndentation"/>
+    <module name="Indentation"/>
     <module name="OuterTypeFilename"/>
 
     <!-- Modifiers -->
@@ -67,10 +106,16 @@
     </module>
 
     <!-- Whitespace -->
+    <module name="EmptyForInitializerPad">
+    <property name="option" value="space"/>
+      </module>
     <module name="EmptyLineSeparator">
       <property name="allowMultipleEmptyLines" value="false"/>
     </module>
     <module name="GenericWhitespace"/>
+    <module name="SeparatorWrap"/>
+    <module name="WhitespaceAfter"/>
+    <module name="WhitespaceAround"/>
 
   </module>
 
