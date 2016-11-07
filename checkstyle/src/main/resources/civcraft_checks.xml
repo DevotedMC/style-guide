@@ -42,20 +42,18 @@
     <module name="DefaultComesLast"/>
     <module name="EmptyStatement"/>
     <module name="FallThrough"/>
-    <module name="FinalLocalVariable"/>
     <module name="HiddenField">
       <property name="ignoreConstructorParameter" value="true"/>
       <property name="ignoreSetter" value="true"/>
       <property name="setterCanReturnItsClass" value="true"/>
     </module>
-    <module name="IllegalCatch"/>
+    <module name="IllegalThrows"/>
     <module name="InnerAssignment"/>
     <module name="MissingSwitchDefault"/>
     <module name="MultipleStringLiterals"/>
     <module name="MultipleVariableDeclarations"/>
     <module name="OneStatementPerLine"/>
     <module name="PackageDeclaration"/>
-    <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
     <module name="StringLiteralEquality"/>
 
@@ -76,7 +74,7 @@
     <!-- Javadoc Comments -->
     <module name="AtclauseOrder"/>
     <module name="JavadocMethod">
-      <property name="scope" value="public"/>
+      <property name="scope" value="package"/>
     </module>
     <module name="JavadocPackage"/>
     <module name="JavadocType">
@@ -90,6 +88,8 @@
     <module name="ArrayTypeStyle"/>
     <module name="CommentsIndentation"/>
     <module name="Indentation"/>
+      <property name="lineWrappingIndentation" value="8"/>
+    </module>
     <module name="OuterTypeFilename"/>
 
     <!-- Modifiers -->
@@ -107,8 +107,8 @@
 
     <!-- Whitespace -->
     <module name="EmptyForInitializerPad">
-    <property name="option" value="space"/>
-      </module>
+      <property name="option" value="space"/>
+    </module>
     <module name="EmptyLineSeparator">
       <property name="allowMultipleEmptyLines" value="false"/>
     </module>
