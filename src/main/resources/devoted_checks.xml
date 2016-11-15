@@ -12,6 +12,8 @@
 
   <!-- Checker properties -->
   <property name="charset" value="UTF-8"/>
+  
+  <module name="JavadocPackage"/>
 
   <!-- Miscellaneous -->
   <module name="NewlineAtEndOfFile"/>
@@ -76,7 +78,6 @@
     <module name="JavadocMethod">
       <property name="scope" value="package"/>
     </module>
-    <module name="JavadocPackage"/>
     <module name="JavadocType">
       <property name="scope" value="public"/>
     </module>
