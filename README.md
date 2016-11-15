@@ -18,7 +18,7 @@ To use this, add the following to your pom.xml:
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>2.17</version>
         <configuration>
-          <configLocation>fix.me.to.buildserver</configLocation>
+          <configLocation>https://build.devotedmc.com/job/Style-guide-master/lastSuccessfulBuild/artifact/src/main/resources/devoted_checks.xml</configLocation>
         </configuration>
       </plugin>
     </plugins>
