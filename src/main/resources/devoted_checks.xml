@@ -60,7 +60,7 @@
     <!-- Headers -->
 
     <!-- Imports -->
-    <module name="AvoidStarImport">
+    <module name="AvoidStarImport"/>
     <module name="IllegalImport"/>
     <module name="ImportOrder">
       <property name="ordered" value="true"/>
