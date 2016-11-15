@@ -1,25 +1,29 @@
-# Civcraft POM
+Checkstyle sheet for DevotedMC's plugin development.
 
-Work in progress. DO NOT ATTEMPT TO USE YET.
 
-All Civcraft Maven projects should inherit from this pom.
 
-To inherit from this pom, put this into your project's pom.xml:
+All plugins actively maintained by DevotedMC are formatted according to these checkstyle rules and contributors are highly encouraged to follow them as well
+
+
+To use this, add the following to your pom.xml:
+
 ```
+
 <project>
   ...
-  <parent>
-    <groupId>co.civcraft.maven</groupId>
-    <artifactId>civcraft-pom</artifactId>
-    <version>1.0.0</version>
-  </parent>  
-  ...
-  <repositories>
-    <repository>
-      <id>civcraft-repo</id>
-      <url>http://build.civcraft.co:8080/plugin/repository/everything/</url>
-    </repository>
-  </repositories>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.17</version>
+        <configuration>
+          <configLocation>fix.me.to.buildserver</configLocation>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
   ...
 </project>
+
 ```
