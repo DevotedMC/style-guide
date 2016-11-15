@@ -87,7 +87,7 @@
     <!-- Miscellaneous -->
     <module name="ArrayTypeStyle"/>
     <module name="CommentsIndentation"/>
-    <module name="Indentation"/>
+    <module name="Indentation">
       <property name="lineWrappingIndentation" value="8"/>
     </module>
     <module name="OuterTypeFilename"/>
