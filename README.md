@@ -16,6 +16,25 @@ Currently we only 'officially' support Eclipse here, because it's what most of o
 
 ### Eclipse
 
+First of all we need to add two plugins to Eclipse:
+
+In Eclipse's menu bar at the top click "Help", then "Eclipse Marketplace..." and you should see the Marketplace window pop up:
+
+![alt tag](http://i.imgur.com/uHfZVo7.png)
+
+If the market place window appears to be frozen at any point, just give it a bit of time. The GUI tends to freeze while loading content, but usually it catches up after a bit.
+
+On the upper left side of the window, you should see a search bar, enter "Checkstyle" and hit Enter. You should now see the "Checkstyle Plugin-in 7.2.0" (or a higher version). Click install and follow the instructions to install the plugin.
+
+![alt tag](http://i.imgur.com/kC2KybY.png)
+
+
+Next we need a plugin to handle editor configs, so search "editorconfig" and install the plugin "editorconfig-eclipse 0.2.2" (or higher version) with the same process as above.
+
+
+The editor config will work on it's own and detect the .editorconfig file in each repo, but unfortunately the checkstyle plugin won't use the style sheet specified in the pom.xml on it's own, so we need to manually set it in your eclipse settings.
+
+
 Start by cloning this repo ``` git clone git@github.com:DevotedMC/style-guide.git```
 
 In Eclipse at the top open the "Window" dropdown menu. Click "Preferences" and you should see this window opening up:
