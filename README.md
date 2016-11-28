@@ -1,4 +1,4 @@
-##Devoted style guide
+#Devoted style guide
 
 Checkstyle sheet for DevotedMC's plugin development.
 
@@ -7,7 +7,7 @@ Checkstyle sheet for DevotedMC's plugin development.
 
 All plugins actively maintained by DevotedMC are formatted according to these checkstyle rules and contributors are expected to follow them as well.
 
-# How to setup your IDE
+## How to setup your IDE
 
 Ideally all of the formatting required will be done by your IDE, you shouldnt have to worry about white spaces and formatting while coding. The following instructions will get you as close as possible to that and we highly recommend following through with them before working on plugin changes that are meant to be merged upstream.
 
@@ -55,7 +55,7 @@ Set type to "External Configuration File", enter a name (for example "Devoted") 
 
 Sidenote: Checkstyle does offer the option "Remote configuration", which seems like a better solution here, because it'll automatically update the configuration and doesn't require cloning the style-guide repo. The issue with that option is that the JVM doesn't natively accept HTTPS certs issued by LetsEncrypt like the one [our Jenkins](https://build.devotedmc.com/) is using, so if you use the same URL as in the pom.xml, it wont work. There are multiple ways around this, you can edit the keystore of your JDK to manually add LetsEncrypt as certificate authority or you could use a direct link
 
-# How to use in your plugin
+## How to use in your plugin
 
 Maven has the option to check for checkstyle violations and report them as part of the build process.
 
