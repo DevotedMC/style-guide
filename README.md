@@ -16,15 +16,32 @@ Currently we only 'officially' support Eclipse here, because it's what most of o
 
 ### Eclipse
 
+Start by cloning this repo ``` git clone git@github.com:DevotedMC/style-guide.git```
 
+In Eclipse at the top open the "Window" dropdown menu. Click "Preferences" and you should see this window opening up:
 
+![alt tag](http://i.imgur.com/dEDmsBc.png)
+
+Click "Checkstyle" in the tree view on the left and then on the right of the checkstyle tab the "New..." button. 
+
+![alt tag](http://i.imgur.com/rGfEyQh.png)
+
+You should now see another dialog like this open up:
+
+![alt tag](http://i.imgur.com/c0Naa5C.png)
+
+##TODO from here on
+
+Set type to "External Configuration File", enter a name (for example "Devoted") and for the location browse to the directory you cloned the style-guide repo to earlier and then select the file src/main/resources/devoted_checks.xml. The description is optional and the other settings are fine in their default state, press "OK" once you are done.
+
+Sidenote: Checkstyle does offer the option "Remote configuration", which seems like a better solution here, because it'll automatically update the configuration and doesn't require cloning the style-guide repo. The issue with that option is that the JVM doesn't natively accept HTTPS certs issued by LetsEncrypt like the one [our Jenkins](https://build.devotedmc.com/) is using, so if you use the same URL as in the pom.xml, it wont work. There are multiple ways around this, you can edit the keystore of your JDK to manually add LetsEncrypt as certificate authority or you could use a direct link
 
 # How to use in your plugin
 
 Maven has the option to check for checkstyle violations and report them as part of the build process.
 
 
-To use this, add the following to your pom.xml:
+To use this in your plugin/maven project, add the following to your pom.xml:
 
 ```
 
