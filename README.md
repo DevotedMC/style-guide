@@ -1,9 +1,6 @@
-#Devoted style guide
+# Devoted style guide
 
 Checkstyle sheet for DevotedMC's plugin development.
-
-
-
 
 All plugins actively maintained by DevotedMC are formatted according to these checkstyle rules and contributors are expected to follow them as well.
 
@@ -47,9 +44,9 @@ You should now see another dialog like this open up:
 
 ![alt tag](http://i.imgur.com/c0Naa5C.png)
 
-Set type to "Remote configuration", enter a name (for example "Devoted") and for the location paste ``` https://build.devotedmc.com/job/Style-guide-master/lastSuccessfulBuild/artifact/src/main/resources/devoted_checks.xml ``` in . The description is optional and the other settings are fine in their default state, press "OK" once you are done.
+Set type to "Remote configuration", enter a name (for example "Devoted") and for the location paste `https://raw.githubusercontent.com/DevotedMC/style-guide/master/src/main/resources/devoted_checks.xml`. The description is optional and the other settings are fine in their default state, press "OK" once you are done.
 
-Note: If Eclipse refuses to create a configuration with the error message "sun.security.validator.ValidatorException: PKIX path building failed", your JDK is outdated. Our jenkins uses a certificate issued by [Let's Encrypt](https://letsencrypt.org/), which isn't supported in older java versions. To fix this simply download a [JDK of Java 8u101 or higher] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and point Eclipse at it.
+Note: If Eclipse refuses to create a configuration with the error message "sun.security.validator.ValidatorException: PKIX path building failed", your JDK is outdated. Our jenkins uses a certificate issued by [Let's Encrypt](https://letsencrypt.org/), which isn't supported in older java versions. To fix this simply download a [JDK of Java 8u101 or higher](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and point Eclipse at it.
 
 Your new configuration should now appear in the list in the middle of the window. Click it to highlight it and then click the "Set as Default" button the right. A green tick should now appear behind the configuration like this:
 
@@ -99,8 +96,6 @@ If you don't like the default color in which Eclipse marks checkstyle errors (ye
 
 
 
-//TODO 
-
 
 
 ## How projects should be setup to use this
@@ -120,7 +115,7 @@ To use this in your plugin/maven project, add the following to your pom.xml:
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>2.17</version>
         <configuration>
-          <configLocation>https://build.devotedmc.com/job/Style-guide-master/lastSuccessfulBuild/artifact/src/main/resources/devoted_checks.xml</configLocation>
+          <configLocation>https://raw.githubusercontent.com/DevotedMC/style-guide/master/src/main/resources/devoted_checks.xml</configLocation>
         </configuration>
       </plugin>
     </plugins>
@@ -131,7 +126,7 @@ To use this in your plugin/maven project, add the following to your pom.xml:
 ```
 
 
-The config location in this pom section refers to Devoteds Stylesheet, which is hosted [here] (https://build.devotedmc.com/job/Style-guide-master/lastSuccessfulBuild/artifact/src/main/resources/devoted_checks.xml). If needed you could replace it with whatever you want, the configLocation tag accepts both local paths and URL.
+The config location in this pom section refers to Devoteds Stylesheet, which is hosted [here](https://build.devotedmc.com/job/Style-guide-master/lastSuccessfulBuild/artifact/src/main/resources/devoted_checks.xml). If needed you could replace it with whatever you want, the configLocation tag accepts both local paths and URL.
 
 
 The .editorconfig should be copied over and placed in the root directory of the project like it is done for this project.
