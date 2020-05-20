@@ -1,11 +1,11 @@
-## How to setup your IDE
+# How to setup your IDE
 
 Ideally all of the formatting required will be done by your IDE, you shouldnt have to worry about white spaces and formatting while coding. The following instructions will get you as close as possible to that and we highly recommend following through with them before working on plugin changes that are meant to be merged upstream.
 
 Currently we only 'officially' support Eclipse here, because it's what most of our developers use. You are free to use whatever IDE you want, but you'll have to figure out on your own how to setup Checkstyle, Editorconfig etc. in those. If you do figure it out for other IDEs, adding your knowledge to this README would be very welcome.
 
 
-### Eclipse
+## Eclipse
 
 First of all we need to add plugins for editorconfig and checkstyle to Eclipse. If you already have either of those installed, simply skip the step where it is installed
 
@@ -89,3 +89,38 @@ You are now done with the mandatory setup part, the following part of the setup 
 If you don't like the default color in which Eclipse marks checkstyle errors (yellow by default), you can change it. Go to Window --> Preferences --> General --> Editors --> Text Editors --> Annotations and change the color for "Checkstyle warning". Everything reported by checkstyle will be a "Checkstyle warning" with our style sheet, so dont worry about configuring "Checkstyle info" or "Checkstyle error".
 
 
+
+## IntelliJ
+
+Clone this repository
+
+Install the [Checkstyle-IDEA plugin](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea)
+
+Go to File --> Settings --> Checkstyle
+Click the plus to the right of the 'Configuration File' table, select 'Use a Checkstyle file accessible via HTTP', put in `https://raw.githubusercontent.com/CivClassic/style-guide/master/src/main/resources/civclassic_checks.xml` as URL, press Next and Finish.
+
+Within the Settings Dialogue, go to Editor --> Code Style.
+At the top is 'Scheme' and to the left of its value (which is likely 'Default' for you) is a drop down with a gear icon. Click it --> Import Scheme --> Checkstyle Configuration.
+
+Select the file `civclassic_checks.xml` at `src/main/resources` in your local clone of this repository and press Ok.
+
+Check `Enable Editorconfig support` towards the bottom of this same window.
+
+
+### In case editor config does not work for you like it did for me
+
+You'll have to manually tell IntelliJ how to format code.
+
+Click Java in the dropdown below Code Style. Note that some of the following settings might already be the way they are supposed to be
+- Tick 'Use tab chracter'
+- Set 'Tab size' to 4
+- Set 'Indent' to 4
+- Set 'Continuation indent' to 8
+- Uncheck 'Keep indends on empty lines'
+
+Switch to the tab 'Wrapping and Braces' at the top. 
+- Scroll down to 'for() statement' and untick 'Align when multiline'
+- Under 'try-with-resources', untick 'Align when multiline'.
+- Under Binary expressions, tick 'Operation sign on next line'
+
+Switch to the tab 'Blank Lines' at the top. Scroll down and set 'Around field' to 0.
