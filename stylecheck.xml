@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC
-        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
-        "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+  "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+  "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
 <!--
-    The Official Civcraft Checkstyle
-
+    The Official Civclassic Checkstyle
     See: http://checkstyle.sourceforge.net/index.html
  -->
 <module name="Checker">
@@ -25,19 +24,15 @@
   </module>
 
   <module name="TreeWalker">
-
     <!-- TreeWalker properties -->
     <property name="tabWidth" value="4"/>
-
     <!-- Annotations -->
     <module name="AnnotationLocation">
       <property name="allowSamelineSingleParameterlessAnnotation" value="false"/>
     </module>
-
     <!-- Block Checks -->
     <module name="LeftCurly"/>
     <module name="NeedBraces"/>
-
     <!-- Class Design -->
     <module name="OuterTypeFilename"/>
     <module name="OneTopLevelClass"/>
@@ -45,7 +40,6 @@
     <module name="InnerTypeLast"/>
     <module name="FinalClass"/>
     <module name="OverloadMethodsDeclarationOrder"/>
-
     <!-- Unicode and special characters -->
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
@@ -59,8 +53,6 @@
       <property name="allowByTailComment" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
-
-
     <!-- Coding -->
     <module name="DeclarationOrder"/>
     <module name="ExplicitInitialization"/>
@@ -87,10 +79,7 @@
     <module name="UpperEll"/>
     <module name="NoFinalizer"/>
     <module name="AvoidNoArgumentSuperConstructorCall"/>
-
-
     <!-- Headers -->
-
     <!-- Imports -->
     <module name="AvoidStarImport"/>
     <module name="IllegalImport"/>
@@ -105,7 +94,6 @@
     <module name="NoLineWrap">
       <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT"/>
     </module>
-
     <!-- Javadoc Comments -->
     <module name="JavadocParagraph"/>
     <module name="AtclauseOrder"/>
@@ -127,17 +115,13 @@
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF"/>
     </module>
     <module name="InvalidJavadocPosition"/>
-
     <!-- Metrics -->
-
     <!-- Miscellaneous -->
     <module name="ArrayTypeStyle"/>
     <module name="CommentsIndentation"/>
-
     <!-- Modifiers -->
     <module name="ModifierOrder"/>
     <module name="RedundantModifier"/>
-
     <!-- Naming Conventions -->
     <module name="MethodName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
@@ -194,13 +178,12 @@
       <message key="name.invalidPattern"
                value="Interface type name ''{0}'' must match pattern ''{1}''."/>
     </module>
-
     <!-- Indentation and line breaks -->
     <module name="OperatorWrap">
       <property name="option" value="NL"/>
       <property name="tokens"
                 value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR,
-                    LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR, METHOD_REF "/>
+                       LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR, METHOD_REF "/>
     </module>
     <module name="Indentation">
       <property name="basicOffset" value="4"/>
@@ -215,10 +198,8 @@
     <module name="MethodParamPad">
       <property name="tokens"
                 value="CTOR_DEF, LITERAL_NEW, METHOD_CALL, METHOD_DEF,
-                    SUPER_CTOR_CALL, ENUM_CONSTANT_DEF"/>
+                       SUPER_CTOR_CALL, ENUM_CONSTANT_DEF"/>
     </module>
-
-
     <!-- Whitespace -->
     <module name="EmptyForInitializerPad">
       <property name="option" value="space"/>
@@ -233,11 +214,9 @@
     <module name="ParenPad">
       <property name="tokens"
                 value="ANNOTATION, ANNOTATION_FIELD_DEF, CTOR_CALL, CTOR_DEF, DOT, ENUM_CONSTANT_DEF,
-                    EXPR, LITERAL_CATCH, LITERAL_DO, LITERAL_FOR, LITERAL_IF, LITERAL_NEW,
-                    LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_WHILE, METHOD_CALL,
-                    METHOD_DEF, QUESTION, RESOURCE_SPECIFICATION, SUPER_CTOR_CALL, LAMBDA"/>
+                       EXPR, LITERAL_CATCH, LITERAL_DO, LITERAL_FOR, LITERAL_IF, LITERAL_NEW,
+                       LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_WHILE, METHOD_CALL,
+                       METHOD_DEF, QUESTION, RESOURCE_SPECIFICATION, SUPER_CTOR_CALL, LAMBDA"/>
     </module>
-
   </module>
-
 </module>
