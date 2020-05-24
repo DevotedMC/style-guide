@@ -136,7 +136,8 @@
 						<artifactId>maven-checkstyle-plugin</artifactId>
 						<version>3.1.1</version>
 						<configuration>
-							<configLocation>https://raw.githubusercontent.com/CivClassic/style-guide/master/stylecheck.xml
+							<configLocation>
+								https://raw.githubusercontent.com/CivClassic/style-guide/master/stylecheck.xml
 							</configLocation>
 							<consoleOutput>true</consoleOutput>
 						</configuration>
