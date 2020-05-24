@@ -51,7 +51,6 @@ Follows Maven conventions, as follows:
 An example pom.xml is provided [here](https://github.com/CivClassic/CivTemplate/blob/master/pom.xml). We'll break down its individual parts in the following:
 
 ```
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				 xmlns="http://maven.apache.org/POM/4.0.0"

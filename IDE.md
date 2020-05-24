@@ -4,7 +4,6 @@ Ideally all of the formatting required will be done by your IDE, you shouldnt ha
 
 Currently we only 'officially' support Eclipse here, because it's what most of our developers use. You are free to use whatever IDE you want, but you'll have to figure out on your own how to setup Checkstyle, Editorconfig etc. in those. If you do figure it out for other IDEs, adding your knowledge to this README would be very welcome.
 
-
 ## Eclipse
 
 First of all we need to add plugins for editorconfig and checkstyle to Eclipse. If you already have either of those installed, simply skip the step where it is installed
@@ -19,12 +18,9 @@ On the upper left side of the window, you should see a search bar, enter "Checks
 
 ![alt tag](http://i.imgur.com/kC2KybY.png)
 
-
 Next we need a plugin to handle editor configs, so search "editorconfig" and install the plugin "editorconfig-eclipse 0.2.2" (or higher version) with the same process as above.
 
-
 The editor config will work on it's own and detect the .editorconfig file in each repo, but unfortunately the checkstyle plugin won't use the style sheet specified in the pom.xml on it's own, so we need to manually set it in your eclipse settings.
-
 
 In Eclipse at the top open the "Window" dropdown menu. Click "Preferences" and you should see this window opening up:
 
@@ -44,12 +40,9 @@ Note: If Eclipse refuses to create a configuration with the error message "sun.s
 
 Your new configuration should now appear in the list in the middle of the window. Click it to highlight it and then click the "Set as Default" button the right. A green tick should now appear behind the configuration like this:
 
-
 ![alt tag](http://i.imgur.com/9HovwSZ.png)
 
-
 Exit the preferences window by pressing "OK" to save all of that.
-
 
 Now we have checkstyle set up, but checkstyle on it's own only reports errors, it doesn't fix them. To adress that we have to create an Eclipse Formatter profile.
 
@@ -75,20 +68,14 @@ Now that we have created formatting profiles and set those as active, we want th
 
 Tick "Perform the selected actions on save", then tick all three options below and set the formatting behavior to "Formar edited lines". Your window should now look like this:
 
-
 ![alt tag](http://i.imgur.com/BaZBOsn.png)
 
 Hit ok to save those changes and have Eclipse automatically organize and format your code whenever you save it.
 
-
 You are now done with the mandatory setup part, the following part of the setup section is optional and simply helps you to improve some of the visuals or deal with minor annoyances. If you dont care about those you are done here.
-
-
 
 #### Change background color of checkstyle errors
 If you don't like the default color in which Eclipse marks checkstyle errors (yellow by default), you can change it. Go to Window --> Preferences --> General --> Editors --> Text Editors --> Annotations and change the color for "Checkstyle warning". Everything reported by checkstyle will be a "Checkstyle warning" with our style sheet, so dont worry about configuring "Checkstyle info" or "Checkstyle error".
-
-
 
 ## IntelliJ
 
@@ -106,13 +93,12 @@ Select the file `civclassic_checks.xml` at `src/main/resources` in your local cl
 
 Check `Enable Editorconfig support` towards the bottom of this same window.
 
-
 ### In case editor config does not work for you like it did for me
 
 You'll have to manually tell IntelliJ how to format code.
 
 Click Java in the dropdown below Code Style. Note that some of the following settings might already be the way they are supposed to be
-- Tick 'Use tab chracter'
+- Tick 'Use tab character'
 - Set 'Tab size' to 4
 - Set 'Indent' to 4
 - Set 'Continuation indent' to 8
