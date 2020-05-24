@@ -131,7 +131,7 @@
             <artifactId>maven-checkstyle-plugin</artifactId>
             <version>3.1.1</version>
             <configuration>
-              <configLocation>https://raw.githubusercontent.com/CivClassic/style-guide/stylecheck.xml</configLocation>
+              <configLocation>https://raw.githubusercontent.com/CivClassic/style-guide/master/stylecheck.xml</configLocation>
               <consoleOutput>true</consoleOutput>
             </configuration>
             <executions>
@@ -172,5 +172,13 @@
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>devoted-jenkins</name>
+      <url>https://build.devotedmc.com/plugin/repository/everything/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
