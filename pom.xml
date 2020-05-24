@@ -16,7 +16,7 @@
   </properties>
 
   <build>
-    <defaultGoal>clean package javadoc:javadoc install</defaultGoal>
+    <defaultGoal>clean install</defaultGoal>
   </build>
 
   <profiles>
