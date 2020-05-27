@@ -8,7 +8,7 @@ pipeline {
         stage ('Build') {
             steps {
                 withMaven() {
-                    sh "mvn clean install deploy -P jenkins -X"
+                    sh "mvn clean install deploy -P jenkins -P upstream -P releases -X"
                 }
             }
         }
