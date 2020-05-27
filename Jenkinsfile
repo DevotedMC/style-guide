@@ -7,8 +7,10 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                withMaven() {
-                    sh "mvn clean install deploy -P jenkins"
+                withMaven(
+                    mavenSettingsConfig: 'civ-settings'
+                    ) {
+                    sh "mvn clean install deploy -P civ-jenkins"
                 }
             }
         }

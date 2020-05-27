@@ -125,7 +125,7 @@
 
 	<profiles>
 		<profile>
-			<id>jenkins</id>
+			<id>civ-jenkins</id>
 			<build>
 				<plugins>
 					<!-- https://maven.apache.org/plugins/maven-source-plugin/ -->
@@ -166,32 +166,6 @@
 					</plugin>
 				</plugins>
 			</build>
-			<repositories>
-				<repository>
-					<id>internal</id>
-					<name>Archiva Managed Internal Repository</name>
-					<url>http://build.civclassic.com:8080/repository/internal/</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-			</repositories>
-			<pluginRepositories>
-				<pluginRepository>
-					<id>internal</id>
-					<name>Archiva Managed Internal Repository</name>
-					<url>http://build.civclassic.com:8080/repository/internal/</url>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</pluginRepository>
-			</pluginRepositories>
 		</profile>
 	</profiles>
 
@@ -217,8 +191,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>internal</id>
-			<url>http://build.civclassic.com:8080/repository/internal/</url>
+			<id>civ-jenkins</id>
+			<url>https://build.civclassic.com/plugin/repository/everything/</url>
 		</repository>
 	</distributionManagement>
 
