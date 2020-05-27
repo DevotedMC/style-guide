@@ -168,25 +168,27 @@
 			</build>
 			<repositories>
 				<repository>
-					<id>jenkins</id>
-					<url>${env.Jenkins.Repository}</url>
+					<id>internal</id>
+					<name>Archiva Managed Internal Repository</name>
+					<url>http://build.civclassic.com:8080/repository/internal/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
 					<snapshots>
-						<enabled>true</enabled>
+						<enabled>false</enabled>
 					</snapshots>
 				</repository>
 			</repositories>
 			<pluginRepositories>
 				<pluginRepository>
-					<id>jenkins</id>
-					<url>${env.Jenkins.Repository}</url>
+					<id>internal</id>
+					<name>Archiva Managed Internal Repository</name>
+					<url>http://build.civclassic.com:8080/repository/internal/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
 					<snapshots>
-						<enabled>true</enabled>
+						<enabled>false</enabled>
 					</snapshots>
 				</pluginRepository>
 			</pluginRepositories>
@@ -215,9 +217,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>releases</id>
-			<name>civclassic-jenkins</name>
-			<url>https://build.civclassic.com/plugin/repository/everything/</url>
+			<id>internal</id>
+			<url>http://build.civclassic.com:8080/repository/internal/</url>
 		</repository>
 	</distributionManagement>
 
