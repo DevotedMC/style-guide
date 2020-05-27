@@ -7,10 +7,15 @@ root = true
 [*]
 charset = utf-8
 indent_style = tab
-indent_size = 4
-end_of_line = crlf
+end_of_line = lf
 insert_final_newline = true
-continuation_indent_size = 8
 
-[*.xml]
+[*.java]
+indent_style = tab
+
+[*.{xml, yml}]
+indent_style = space
 indent_size = 2
+
+[*.csv]
+insert_final_newline = false
