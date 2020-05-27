@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn clean install deploy -P civ-jenkins
+                sh 'mvn clean install deploy -P civ-jenkins'
             }
         }
     }
