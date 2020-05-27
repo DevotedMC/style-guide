@@ -180,7 +180,7 @@
 			</repositories>
 			<pluginRepositories>
 				<pluginRepository>
-					<id>jenkins</id>
+					<id>upstream</id>
 					<url>${env.Jenkins.Repository}</url>
 					<releases>
 						<enabled>true</enabled>
