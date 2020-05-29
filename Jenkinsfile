@@ -17,7 +17,7 @@ pipeline {
                 }
             }
             steps {
-                build '../CivModCore/master', wait: false
+                build job: '../CivModCore/master', wait: false
             }
         }
     }
