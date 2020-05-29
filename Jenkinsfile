@@ -10,14 +10,18 @@ pipeline {
                 sh 'mvn clean install deploy -P civ-jenkins'
             }
         }
+        stage ('Trigger cascading builds') {
+            steps {
+                if (env.BRANCH_NAME == 'master') {
+                    build '../CivModCore/master'
+                }
+            }
+        }
     }
     post {
         always {
             withCredentials([string(credentialsId: 'civclassic-discord-webhook', variable: 'DISCORD_WEBHOOK')]) {
                 discordSend description: "**Build:** [${currentBuild.id}](${env.BUILD_URL})\n**Status:** [${currentBuild.currentResult}](${env.BUILD_URL})\n", footer: 'Civclassic Jenkins', link: env.BUILD_URL, successful: currentBuild.resultIsBetterOrEqualTo('SUCCESS'), title: "${env.JOB_NAME} #${currentBuild.id}", webhookURL: DISCORD_WEBHOOK
-            }
-            if (env.BRANCH_NAME == 'master') {
-                build '../CivModCore/master'
             }
         }
     }
