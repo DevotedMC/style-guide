@@ -5,7 +5,7 @@ pipeline {
         jdk 'Java 8'
     }
      stages {
-        stage ('Build') {ddd
+        stage ('Build') {
             steps {
                 sh 'mvn clean install deploy -P civ-jenkins'
             }
