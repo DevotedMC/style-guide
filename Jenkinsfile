@@ -11,10 +11,13 @@ pipeline {
             }
         }
         stage ('Trigger cascading builds') {
-            steps {
-                if (env.BRANCH_NAME == 'master') {
-                    build '../CivModCore/master'
+            when {
+                expression {
+                    env.BRANCH_NAME == 'master'
                 }
+            }
+            steps {
+                build '../CivModCore/master'
             }
         }
     }
