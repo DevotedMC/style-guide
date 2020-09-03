@@ -184,7 +184,7 @@
 	<distributionManagement>
 		<repository>
 			<id>civ-jenkins</id>
-			<url>https://build.devotedmc.com/plugin/repository/</url>
+			<url>https://build.devotedmc.com/plugin/repository/everything/</url>
 		</repository>
 	</distributionManagement>
 
