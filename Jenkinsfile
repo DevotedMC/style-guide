@@ -18,7 +18,8 @@ pipeline {
             }
             steps {
                 build job: '../CivModCore/master', wait: false
-				build job: '../AttrHider/master', wait: false
+                build job: '../AttrHider/master', wait: false
+                build job: '../CombatTagPlus/master', wait: false
             }
         }
     }
