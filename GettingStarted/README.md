@@ -34,7 +34,7 @@ These instructions, while covering generally expected environments, will not cov
 
 5. Install MariaDB: `https://mariadb.org/download/`
 
-    * if you're on macOS or Linux, you may find it easier to install via package managers, such as:
+    * If you're on macOS or Linux, you may find it easier to install via package managers, such as:
 
         * Homebrew: `brew install mariadb`
 
@@ -52,9 +52,9 @@ These instructions, while covering generally expected environments, will not cov
 
     * If you get the message: "Specified key was too long; max key length is 767 bytes"
     
-        * change your database encoding to latin1
+        * Change your database encoding to latin1
 
-        * alternatively, upgrade to at least MariaDB 10.2 (this may require an OS update for your server hosting platform)
+        * Alternatively, upgrade to at least MariaDB 10.2 (this may require an OS update for your server hosting platform)
 
 ---
 
@@ -62,23 +62,23 @@ These instructions, while covering generally expected environments, will not cov
 
 1. Download plugins from: `https://build.devotedmc.com/job/Civclassic/`
 
-    * if a plugin or version cannot be found, you can compile them directly from `https://github.com/CivClassic`
+    * If a plugin or version cannot be found, you can compile them directly from `https://github.com/CivClassic`
 
-        * open the cloned plugin in a terminal and run `mvn clean package`
+        * Open the cloned plugin in a terminal and run `mvn clean package`
 
-        * this will compile the plugin into a jar in `<project root>/target/`
+        * This will compile the plugin into a jar in `<project root>/target/`
 
         * If build fails because civclassic-parent POM cannot be located:
 
-            * clone the CivClassic style-guide: `https://github.com/CivClassic/style-guide`
+            * Clone the CivClassic style-guide: `https://github.com/CivClassic/style-guide`
 
-            * open the cloned style-guide in a terminal
+            * Open the cloned style-guide project folder in a terminal
 
-            * run `mvn install`
+            * Run `mvn install`
 
 2. Stop the server if it's already running.
 
-    * you can also hot load the plugins if you're using PlugMan (`https://dev.bukkit.org/projects/plugman`) or any other plugin manager, though these can have complications and restarting the server may be necessary anyway.
+    * You can also hot load the plugins if you're using PlugMan (`https://dev.bukkit.org/projects/plugman`) or any other plugin manager, though these can have complications and restarting the server may be necessary anyway.
 
 3. Drop the built jars into the server's `/plugins` folder and start the minecraft server.
 
@@ -123,4 +123,4 @@ Note that NameLayer and Citadel are currently in constant flux. The following is
 
 * Citadel 4.1.0
 
-  (`https://build.devotedmc.com/job/Civclassic/job/NameLayer/job/master/`)
+  (`https://build.devotedmc.com/job/Civclassic/job/Citadel/job/master/`)
