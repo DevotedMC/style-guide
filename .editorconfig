@@ -9,9 +9,23 @@ charset = utf-8
 indent_style = tab
 end_of_line = lf
 insert_final_newline = true
+max_line_length = 120
+tab_width = 4
+indent_size = 4
+indent_style = tab
+
+# Intellij specific
+ij_continuation_indent_size = 8
+ij_formatter_off_tag = @formatter:off
+ij_formatter_on_tag = @formatter:on
+ij_formatter_tags_enabled = true
 
 [*.java]
 indent_style = tab
+indent_size = 4
+ij_java_use_single_class_imports = true
+ij_java_blank_lines_after_imports = 1
+ij_java_blank_lines_after_package = 1
 
 [*.{xml, yml}]
 indent_style = space

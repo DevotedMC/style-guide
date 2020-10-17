@@ -124,3 +124,15 @@ Note that NameLayer and Citadel are currently in constant flux. The following is
 * Citadel 4.1.0
 
   (`https://build.devotedmc.com/job/Civclassic/job/Citadel/job/master/`)
+  
+---
+
+## Editor Specifics
+
+### Intellij
+
+Make sure to use the proper formatting settings for projects by selecting `Project`.
+* Go to: `File -> Settings -> Code Style -> Java -> Scheme`
+* Select: `Project` as Formatter Setting
+
+![intellij settings](img/intellij_project_formatter_style.png)
