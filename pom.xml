@@ -158,6 +158,9 @@
 						</executions>
 						<configuration>
 							<source>${java.compile.version}</source>
+							<doclint>none</doclint>
+							<failOnWarnings>false</failOnWarnings>
+							<failOnError>false</failOnError>
 						</configuration>
 					</plugin>
 				</plugins>
