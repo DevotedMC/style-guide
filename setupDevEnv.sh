@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
 #Assumes Java, Maven and git are installed. If you haven't done that yet, see https://github.com/CivClassic/style-guide/tree/master/GettingStarted#setting-up-your-development-environment
+#You also need curl if your distribution doesn't already include it
 
-#Change this as needed
+#You can uncomment this line on Debian/Ubuntu to install everything needed, except for java
+#sudo apt-get install curl git maven
+
+#You will need to have a global username and email set in your git install. If you haven't already done this, use the following commands
+# git config --global user.email "you@example.com"
+# git config --global user.name "Your Name"
+
+
+#Change these variables as needed
 
 #Directory we are basing in, defaulting to the current one
 currentDir=$(pwd)
@@ -20,7 +29,9 @@ extraGithubNames=("DevotedMC" "Maxopoly")
 #Do you want PaperMC to be installed? Set only to false if you already have it
 installPaper='true'
 
-#Don't touch this
+
+
+#Don't touch anything beyond this point unless you REALLY know what you're doing -------------------------------------------------------------
 pathSep="/"
 targetFolder=$currentDir$pathSep$folderName
 orgName="CivClassic"
