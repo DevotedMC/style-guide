@@ -41,7 +41,7 @@ webPathSep="/"
 gitSuffix=".git"
 extraGitAliasAmount=${#extraGitAliases[@]}
 
-civPlugins='CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors OldEnchanting KiraBukkitGateway SimpleAdminHacks AttrHider'
+civPlugins='style-guide CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors OldEnchanting KiraBukkitGateway SimpleAdminHacks AttrHider'
 
 mkdir -p $targetFolder
 cd $targetFolder
