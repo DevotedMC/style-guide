@@ -4,11 +4,23 @@ These instructions, while covering generally expected environments, will not cov
 
 ## Setting up your development environment
 
-1. Install git: `https://git-scm.com/downloads`
+1. Install Java 11: `https://www.oracle.com/java/technologies/javase-jdk11-downloads.html` (Recommended, login necessary)
 
-2. Install Maven: `https://maven.apache.org/download.cgi`
+	* or OpenJDK 11: `https://adoptopenjdk.net/`
 
-3. Install a Java Development Environment
+	* *other Java providers are available, but it's recommended to avoid them unless you know what you are doing.*
+
+2. Install git: `https://git-scm.com/downloads`
+
+3. Install Maven: `https://maven.apache.org/download.cgi`
+
+	* macOS: `brew install maven`
+
+	* Linux: `sudo apt install maven`
+
+	* Windows: follow these instructions `https://mkyong.com/maven/how-to-install-maven-in-windows/` (tedius)
+
+4. Install a Java Development Environment
 
     * Eclipse is good: `https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/lunasr2`
 
@@ -22,7 +34,7 @@ These instructions, while covering generally expected environments, will not cov
 
     * Badass? Vim: `http://www.vim.org/download.php` or Emacs: `http://www.gnu.org/software/emacs/#Obtaining`
 
-4. Download Spigot's BuildTools.jar: `https://www.spigotmc.org/wiki/buildtools/`
+5. Download Spigot's BuildTools.jar: `https://www.spigotmc.org/wiki/buildtools/`
 
     1. Follow instructions on wiki to download the required version of Spigot
 
@@ -32,29 +44,29 @@ These instructions, while covering generally expected environments, will not cov
 
         * run `java -jar BuildTools.jar --rev 1.16.1`
 
-5. Install MariaDB: `https://mariadb.org/download/`
+6. Install MariaDB: `https://mariadb.org/download/`
 
-    * If you're on macOS or Linux, you may find it easier to install via package managers, such as:
+	* If you're on macOS or Linux, you may find it easier to install via package managers, such as:
 
-        * Homebrew: `brew install mariadb`
+		* macOS: `brew install mariadb`
 
-        * apt: `sudo apt install mariadb-server`
+		* Linux: `sudo apt install mariadb-server`
 
-    * Post installation setup differs from platform to platform
+	* Post installation setup differs from platform to platform
 
-        * If you're on Windows, you're able to set the root password as part of the installation process
+		* If you're on Windows, you're able to set the root password as part of the installation process
 
-        * Some platforms and some versions support the use of `mysql_secure_installation`, while others require more elaborate terminal work. Here are some guides:
+		* Some platforms and some versions support the use of `mysql_secure_installation`, while others require more elaborate terminal work. Here are some guides:
 
-            * `https://mariadb.com/kb/en/mysql_secure_installation/`
+			* `https://mariadb.com/kb/en/mysql_secure_installation/`
 
-            * `https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password`
+			* `https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password`
 
-    * If you get the message: "Specified key was too long; max key length is 767 bytes"
-    
-        * Change your database encoding to latin1
+	* If you get the message: "Specified key was too long; max key length is 767 bytes"
 
-        * Alternatively, upgrade to at least MariaDB 10.2 (this may require an OS update for your server hosting platform)
+		* Change your database encoding to latin1 (undesireable but apparently works)
+
+		* Alternatively, upgrade to at least MariaDB 10.2 (this may require an OS update for your server hosting platform)
 
 ---
 
