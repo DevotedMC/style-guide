@@ -4,7 +4,7 @@ These instructions, while covering generally expected environments, will not cov
 
 ## Setting up your development environment
 
-1. Install Java 11: `https://www.oracle.com/java/technologies/javase-jdk11-downloads.html` (Recommended, login necessary)
+1. Install Oracle Java 11: `https://www.oracle.com/java/technologies/javase-jdk11-downloads.html` 
 
 	* or OpenJDK 11: `https://adoptopenjdk.net/`
 
@@ -18,11 +18,11 @@ These instructions, while covering generally expected environments, will not cov
 
 	* Linux: `sudo apt install maven`
 
-	* Windows: follow these instructions `https://mkyong.com/maven/how-to-install-maven-in-windows/` (tedius)
+	* Windows: follow these instructions `https://mkyong.com/maven/how-to-install-maven-in-windows/` (tedious)
 
 4. Install a Java Development Environment
 
-    * Eclipse is good: `https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/lunasr2`
+    * Eclipse is good: `https://www.eclipse.org/downloads/packages/release/2020-12/r/eclipse-ide-java-developers`
 
     * IntelliJ is good: `https://www.jetbrains.com/idea/download/`
 
@@ -34,15 +34,17 @@ These instructions, while covering generally expected environments, will not cov
 
     * Badass? Vim: `http://www.vim.org/download.php` or Emacs: `http://www.gnu.org/software/emacs/#Obtaining`
 
-5. Download Spigot's BuildTools.jar: `https://www.spigotmc.org/wiki/buildtools/`
+5. Install PaperMC:
 
-    1. Follow instructions on wiki to download the required version of Spigot
+    1. Clone PaperMC `git clone https://github.com/PaperMC/Paper && cd Paper`
 
-    2. Compile Spigot & Craftbukkit from BuildTools.jar:
+    2. Revert it to the latest 1.16.1 commit `git reset --hard 627f4b8561115d40d6a39587d1ad94b0104f7e14`
 
-        * open the folder with `BuildTools.jar` in a terminal
+    3. Build Paper to install it in your local Maven cache and make it available as dependency `./paper jar`
 
-        * run `java -jar BuildTools.jar --rev 1.16.1`
+
+At this point you should be able to import plugins into your IDE and compile them by invoking `mvn` in their respective folder. Further instructions are only needed if you also desire a test server to test your changes on. Alternatively to this manual setup, see also our [Ansible deployment environment](https://github.com/civclassic/ansiblesetup) which automates setting up a full copy of Civclassic production.
+
 
 6. Install MariaDB: `https://mariadb.org/download/`
 
