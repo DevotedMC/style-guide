@@ -19,7 +19,7 @@ webPathSep="/"
 masterBranch="master"
 masterBranchRef="$orgName$webPathSep$masterBranch"
 
-civPlugins='style-guide CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors OldEnchanting KiraBukkitGateway SimpleAdminHacks AttrHider'
+civPlugins='style-guide CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery WorldBorder RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors OldEnchanting KiraBukkitGateway SimpleAdminHacks AttrHider'
 
 if [ ! -d "$targetFolder" ]; then
 	echo "Target folder did not exist"
