@@ -14,6 +14,7 @@ pipeline {
             when {
                 expression {
                     env.BRANCH_NAME == 'master'
+                    artifactDeployer 
                 }
             }
             steps {
