@@ -14,10 +14,10 @@ pipeline {
             when {
                 expression {
                     env.BRANCH_NAME == 'master'
-                    artifactDeployer 
                 }
             }
             steps {
+                artifactDeployer
                 build job: '../CivModCore/master', wait: false
                 build job: '../AttrHider/master', wait: false
                 build job: '../CombatTagPlus/master', wait: false
