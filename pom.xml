@@ -40,6 +40,7 @@
 				<configuration>
 					<source>${java.compile.version}</source>
 					<target>${java.compile.version}</target>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
 				</configuration>
 			</plugin>
 			<!-- https://maven.apache.org/surefire/maven-surefire-plugin/ Using the 
