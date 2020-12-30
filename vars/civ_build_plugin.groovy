@@ -5,7 +5,7 @@ def call() {
 		sh 'mvn -U clean package -P civ-jenkins'
 	} 
 	else {
-		sh 'mvn -U clean install -P civ-jenkins'
+		sh 'mvn -U clean install deploy -P civ-jenkins'
 	} 
 }
 
