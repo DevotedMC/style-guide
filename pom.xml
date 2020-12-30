@@ -13,6 +13,8 @@
 		<java.compile.version>11</java.compile.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<github.global.server>github</github.global.server> <!-- Used as reference id in mvn deploy -->
+		<civ.localArtifactStaging>file:///var/jenkins_home/repoStaging</civ.localArtifactStaging>
 	</properties>
 
 	<build>
@@ -164,6 +166,36 @@
 							<failOnError>false</failOnError>
 						</configuration>
 					</plugin>
+					<plugin>
+						<artifactId>maven-deploy-plugin</artifactId>
+						<version>2.8.1</version>
+					</plugin>
+					<plugin>
+						<groupId>com.github.github</groupId>
+						<artifactId>site-maven-plugin</artifactId>
+						<version>0.11</version>
+						<configuration>
+							<message>${project.artifactId} version ${project.version}</message>  <!-- git commit message -->
+							<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+							<outputDirectory>${civ.localArtifactStaging}</outputDirectory> <!-- matches distribution management repository url above -->
+							<branch>refs/heads/master</branch>                       <!-- remote branch name -->
+							<includes>
+								<include>**/*</include>
+							</includes>
+							<repositoryName>artifacts</repositoryName>      <!-- github repo name -->
+							<repositoryOwner>CivClassic</repositoryOwner>    <!-- github username -->
+						</configuration>
+						<executions>
+							<!-- run site-maven-plugin's 'site' target as part of the build's 
+								normal 'deploy' phase -->
+							<execution>
+								<goals>
+									<goal>site</goal>
+								</goals>
+								<phase>deploy</phase>
+							</execution>
+						</executions>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
@@ -179,7 +211,7 @@
 	<distributionManagement>
 		<repository>
 			<id>civ-jenkins</id>
-			<url>https://build.devotedmc.com/plugin/repository/everything/</url>
+			<url>${civ.localArtifactStaging}</url>
 		</repository>
 	</distributionManagement>
 

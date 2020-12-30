@@ -7,7 +7,7 @@ pipeline {
      stages {
         stage ('Build') {
             steps {
-                sh 'mvn clean install -P civ-jenkins'
+                sh 'mvn clean install deploy -P civ-jenkins'
             }
         }
         stage ('Trigger cascading builds') {
@@ -17,8 +17,6 @@ pipeline {
                 }
             }
             steps {
-                step([$class: 'ArtifactArchiver', artifacts: '**/target/*.pom', fingerprint: true])
-                step([$class: 'UpdaterPublisher'])
                 build job: '../CivModCore/master', wait: false
                 build job: '../AttrHider/master', wait: false
                 build job: '../CombatTagPlus/master', wait: false
