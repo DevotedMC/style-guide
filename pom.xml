@@ -211,7 +211,7 @@
 	<distributionManagement>
 		<repository>
 			<id>civ-jenkins</id>
-			<url>${civ.localArtifactStaging}</url>
+			<url>file://${civ.localArtifactStaging}</url>
 		</repository>
 	</distributionManagement>
 
