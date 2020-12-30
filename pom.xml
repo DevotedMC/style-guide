@@ -176,7 +176,7 @@
 						<configuration>
 							<message>${project.artifactId} version ${project.version}</message>  <!-- git commit message -->
 							<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-							<outputDirectory>../../repoStaging</outputDirectory> <!-- matches distribution management repository url above -->
+							<outputDirectory>../../../../../../../var/jenkins_home/repoStaging</outputDirectory> <!-- matches distribution management repository url above -->
 							<branch>refs/heads/master</branch>                       <!-- remote branch name -->
 							<includes>
 								<include>**/*</include>
