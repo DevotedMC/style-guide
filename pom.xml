@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<github.global.server>github</github.global.server> <!-- Used as reference id in mvn deploy -->
-		<civ.localArtifactStaging>file:///var/jenkins_home/repoStaging</civ.localArtifactStaging>
+		<civ.localArtifactStaging>/var/jenkins_home/repoStaging</civ.localArtifactStaging>
 	</properties>
 
 	<build>
@@ -177,7 +177,7 @@
 						<configuration>
 							<message>${project.artifactId} version ${project.version}</message>  <!-- git commit message -->
 							<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-							<outputDirectory>${civ.localArtifactStaging}</outputDirectory> <!-- matches distribution management repository url above -->
+							<outputDirectory>../../../../${civ.localArtifactStaging}</outputDirectory> <!-- matches distribution management repository url above -->
 							<branch>refs/heads/master</branch>                       <!-- remote branch name -->
 							<includes>
 								<include>**/*</include>
