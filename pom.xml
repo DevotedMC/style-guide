@@ -172,11 +172,11 @@
 					<plugin>
 						<groupId>com.github.github</groupId>
 						<artifactId>site-maven-plugin</artifactId>
-						<version>0.11</version>
+						<version>0.12</version>
 						<configuration>
 							<message>${project.artifactId} version ${project.version}</message>  <!-- git commit message -->
 							<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-							<outputDirectory>${user.dir}/repoStaging</outputDirectory> <!-- matches distribution management repository url above -->
+							<outputDirectory>../../repoStaging</outputDirectory> <!-- matches distribution management repository url above -->
 							<branch>refs/heads/master</branch>                       <!-- remote branch name -->
 							<includes>
 								<include>**/*</include>
