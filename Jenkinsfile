@@ -17,6 +17,7 @@ pipeline {
                 }
             }
             steps {
+                step([$class: 'ArtifactArchiver', artifacts: '**/target/*.pom', fingerprint: true])
                 step([$class: 'UpdaterPublisher'])
                 build job: '../CivModCore/master', wait: false
                 build job: '../AttrHider/master', wait: false
