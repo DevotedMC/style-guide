@@ -182,7 +182,7 @@
 								<include>**/*</include>
 							</includes>
 							<repositoryName>artifacts</repositoryName>      <!-- github repo name -->
-							<repositoryOwner>CivClassic</repositoryOwner>    <!-- github username -->
+							<repositoryOwner>civclassic</repositoryOwner>    <!-- github username -->
 						</configuration>
 						<executions>
 							<!-- run site-maven-plugin's 'site' target as part of the build's 
