@@ -7,8 +7,8 @@ def call() {
     dir ('/var/jenkins_home/repoStaging') {
       sh 'git add .'
       sh 'git commit -m \\"${projectName}\\"'
-      sshagent(['d0b8e457-9b94-4222-bf26-a4657960c6d7']) {
-        sh 'git push'
+      sshagent(['civclassic-bot-ssh-key']) {
+        sh 'git push origin master:master'
       }
     }
 }
