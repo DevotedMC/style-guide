@@ -176,6 +176,11 @@
 			<id>papermc</id>
 			<url>https://papermc.io/repo/repository/maven-public/</url>
 		</repository>
+		<repository>
+			<id>github</id>
+			<name>GitHub CivClassic Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/CivClassic/artifacts</url>
+		</repository>
 	</repositories>
 
 	<distributionManagement>
