@@ -41,16 +41,19 @@ webPathSep="/"
 gitSuffix=".git"
 extraGitAliasAmount=${#extraGitAliases[@]}
 
-civPlugins='style-guide CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery WorldBorder RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors OldEnchanting KiraBukkitGateway SimpleAdminHacks AttrHider'
+civPlugins='style-guide CombatTagPlus CivModCore RealisticBiomes HiddenOre NameLayer Citadel CivChat2 FactoryMod JukeAlert Bastion RailSwitch BanStick Brewery WorldBorder RandomSpawn ExilePearl CivDuties CivSpy Finale ItemExchange EssenceGlue NameColors KiraBukkitGateway SimpleAdminHacks'
 
 mkdir -p $targetFolder
 cd $targetFolder
 
-#Install Paper 1.16.1
+#Install Paper 1.16.4
 if $installPaper ; then
-	git clone https://github.com/PaperMC/Paper
-	cd Paper/
-	git reset --hard 627f4b8561115d40d6a39587d1ad94b0104f7e14
+	git init paper
+	cd paper
+	git config core.autocrlf false
+	git remote add origin https://github.com/PaperMC/Paper.git
+	git fetch --all
+	git reset --hard aaff430b6e1f71c875532df01b099228f7de40b7
 	./paper jar
 fi
 
